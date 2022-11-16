@@ -1,5 +1,4 @@
 import {render, screen, fireEvent} from '@testing-library/react'
-import checkStringsAnagram from '../src/checkStringsAnagram';
 import '@testing-library/jest-dom'
 import App from '../src/App'
 
