@@ -9,13 +9,13 @@ describe('the anagram calculator function', () => {
         expect(screen.getByTestId('message')).toHaveTextContent('Write something in the input fields to see if they are anagrams')
 
     })
-    it.skip('requires both input fields', () => {
+    it('requires both input fields to have a value', () => {
       render(<App/>)
       const input1 = screen.getByTestId('input1')
       const button = screen.getByTestId('button')
       fireEvent.change(input1, {target: {value: 'Hej'}})
       fireEvent.click(button)
-      expect(screen.getByTestId('message')).toHaveTextContent('Hej and jeh are anagrams!')
+      expect(screen.getByTestId('message')).toHaveTextContent('Please write something in both of the input fields to find out if they are anagrams')
     })
 
     it('is anagram if length and letters are equal', () => {

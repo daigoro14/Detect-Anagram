@@ -1,4 +1,7 @@
   function checkStringsAnagram(a, b) {
+    if (a===""||b===""){
+      return "Please write something in both of the input fields to find out if they are anagrams"
+    }
     const len1 = a.length;
     const len2 = b.length;
     if(len1 !== len2){
